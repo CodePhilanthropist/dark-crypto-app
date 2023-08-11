@@ -301,8 +301,8 @@ class HomeScreen extends StatelessWidget {
               child: largeFont(value: "Watchlist"),
             ),
             SizedBox(height: height * 0.015),
-            SizedBox(
-              height: height * 0.367,
+            Expanded(
+              // height: height * 0.367,
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
                 physics: const PageScrollPhysics(

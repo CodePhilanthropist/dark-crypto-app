@@ -17,19 +17,24 @@ class MenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
+    return Material(
+      color: Colors.transparent,
       borderRadius: BorderRadius.circular(10),
-      child: Container(
-        width: 40,
-        height: 40,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: iconColor ?? bgColor,
-        ),
-        child: MaterialButton(
-          onPressed: onPressed,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(10),
+        onTap: onPressed,
+        child: Container(
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: iconColor ?? bgColor,
+          ),
           child: Align(
-            child: SvgPicture.asset(iconPath),
+            alignment: Alignment.center,
+            child: SvgPicture.asset(
+              iconPath,
+            ),
           ),
         ),
       ),
